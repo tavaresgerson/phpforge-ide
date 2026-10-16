@@ -1,2 +1,0 @@
-class PrefixMatchPackageCaseInsensitive extends Ja {
-}

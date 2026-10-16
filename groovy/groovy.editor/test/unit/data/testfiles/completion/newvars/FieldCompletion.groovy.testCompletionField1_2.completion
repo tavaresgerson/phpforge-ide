@@ -1,6 +1,0 @@
-Code completion result for source line:
-String |
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-VARIABLE   s                                          null
-VARIABLE   string                                     null

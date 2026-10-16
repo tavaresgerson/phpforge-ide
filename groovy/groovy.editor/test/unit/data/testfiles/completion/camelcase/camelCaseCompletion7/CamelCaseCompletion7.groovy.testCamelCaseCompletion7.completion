@@ -1,6 +1,0 @@
-Code completion result for source line:
-NoSE|^
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-CLASS      NoSuchElementException                     null
-CLASS      NotSerializableException                   null

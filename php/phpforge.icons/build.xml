@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<project basedir="." default="build" name="php/phpforge.icons">
+  <import file="../../nbbuild/templates/projectized.xml"/>
+
+  <taskdef name="locjar" classname="org.netbeans.nbbuild.LocalizedJar"
+           classpath="${nbantext.jar}"/>
+
+  <!--
+      Icon theme do PHPForge IDE: substitui (zip update) os recursos de ícone
+      diretamente nos JARs base dos módulos alvo — set Lucide monocromático nas
+      ações/árvores/toolbars e glyphs coloridos nos tipos PHP.
+      Nota: injeção via locale-JARs *_nb.jar não funciona aqui porque o
+      ImageUtilities resolve recursos pelo classloader global do openide.util.ui,
+      que não enxerga locale jars de outros módulos (o branding oficial só
+      funciona para recursos carregados pelo próprio módulo, ex.: splash).
+  -->
+  <target name="netbeans-extra">
+    <zip destfile="${netbeans.dest.dir}/php/modules/org-netbeans-modules-php-editor.jar" update="true">
+      <zipfileset dir="icons-src/org/netbeans/modules/php/editor/resources"
+                  prefix="org/netbeans/modules/php/editor/resources"/>
+    </zip>
+    <zip destfile="${netbeans.dest.dir}/platform/modules/org-openide-actions.jar" update="true">
+      <zipfileset dir="icons-src/org/openide/resources/actions"
+                  prefix="org/openide/resources/actions"/>
+    </zip>
+    <zip destfile="${netbeans.dest.dir}/platform/modules/org-openide-loaders.jar" update="true">
+      <zipfileset dir="icons-src/org/openide/loaders"
+                  prefix="org/openide/loaders"/>
+    </zip>
+    <zip destfile="${netbeans.dest.dir}/ide/modules/org-netbeans-modules-projectui.jar" update="true">
+      <zipfileset dir="icons-src/org/netbeans/modules/project/ui/resources"
+                  prefix="org/netbeans/modules/project/ui/resources"/>
+    </zip>
+  </target>
+</project>

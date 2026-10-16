@@ -450,10 +450,32 @@ metabuild.hash=${metabuild.hash}</echo>
        </condition>
   </target>
   <target name="finish-build" depends="finish-build-platform,finish-build-nb"/>
-  <target name="finish-build-platform" depends="init,-check-nb-cluster" unless="has.nb.cluster">
+  <target name="finish-build-platform" depends="init,-check-nb-cluster,-load-module-flags" unless="has.nb.cluster">
     <copy file="../platform/o.n.bootstrap/readme/README-bin.txt" tofile="${netbeans.dest.dir}/README.txt" overwrite="true"/>
+    <!-- Install the application launcher and configuration even without the nb
+         cluster, so the resulting image starts like a regular IDE build. -->
+    <mkdir dir="${netbeans.dest.dir}/bin" />
+    <copy file="../nb/ide.launcher/unix/netbeans" todir="${netbeans.dest.dir}/bin" />
+    <chmod file="${netbeans.dest.dir}/bin/netbeans" perm="ugo+rx"/>
+    <mkdir dir="${netbeans.dest.dir}/etc" />
+    <copy file="../nb/ide.launcher/netbeans.conf" todir="${netbeans.dest.dir}/etc" overwrite="true"/>
+    <replace file="${netbeans.dest.dir}/etc/netbeans.conf" value="defaultvalue" propertyFile="${nb_all}/nbbuild/build/netbeansrelease.properties">
+        <replacefilter token="@@metabuild.RawVersion@@" property="metabuild.RawVersion"/>
+        <replacefilter token="@@metabuild.logcli@@" property="metabuild.logcli"/>
+        <replacefilter token="@@metabuild.jms-flags@@" value="${metabuild.jms-flags}"/>
+    </replace>
+    <echo file="${netbeans.dest.dir}/etc/netbeans.clusters"># Clusters of this slim PHP IDE build
+platform
+ide
+webcommon
+php
+harness
+</echo>
     <fixcrlf eol="lf" srcdir="${netbeans.dest.dir}" >
       <include name="${nb.cluster.platform.dir}/lib/nbexec" />
+      <include name="etc/netbeans.conf" />
+      <include name="etc/netbeans.clusters" />
+      <include name="bin/netbeans" />
     </fixcrlf>
   </target>
   <target name="-download-nb-windows-launchers" depends="init,-check-nb-cluster" if="has.nb.cluster">
@@ -677,7 +699,7 @@ Hg ID:    ${hg.id}
   <target name="zip-cluster-config" depends="init">
     <property name="zip.dir" location="."/>
     <mkdir dir="${zip.dir}"/>
-    <property name="zip.name" location="${zip.dir}/NetBeans-${buildnum}-${cluster.config}.zip"/>
+    <property name="zip.name" location="${zip.dir}/PHPForge-${buildnum}-${cluster.config}.zip"/>
     <resolvelist name="nb.clusters.dirs" list="${nb.clusters.list}">
         <mapper type="glob" from="*" to="*.dir"/>
     </resolvelist>
@@ -1194,7 +1216,7 @@ It is possible to use -Ddebug.port=3234 -Ddebug.pause=y to start the system in d
     </condition>
 
     <condition property="tryme.launcher.prefix" value="${netbeans.dest.dir}/bin/netbeans" else="${netbeans.dest.dir}/platform/lib/nbexec">
-      <available file="${netbeans.dest.dir}/nb/.lastModified" />
+      <available file="${netbeans.dest.dir}/bin/netbeans"/>
     </condition>
     <property name="run.args.ide" value=""/>
     <exec osfamily="windows" executable="${tryme.launcher.prefix}${jvm.arch.string}.exe" failonerror="yes" dir="${java.io.tmpdir}">
@@ -1259,7 +1281,7 @@ It is possible to use -Ddebug.port=3234 -Ddebug.pause=y to start the system in d
     <zip destfile="${l10n.kit}">
         <fileset dir="${nb_all}" includesfile="${nb_all}/nbbuild/installer/l10n.list"/>
         <fileset dir="${nb_all}" includesfile="${nb_all}/nbi/l10n.list"/>
-        <fileset dir="${nb_all}" includesfile="${nb_all}/nb/ide.branding/l10n.list"/>
+        <fileset dir="${nb_all}" includesfile="${nb_all}/php/phpforge.branding/l10n.list"/>
     </zip>
   </target>
 

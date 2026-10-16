@@ -1,0 +1,369 @@
+This project's dependencies
+
+
+Runtime dependencies:
+=====================
+
+From: Antlr
+  - Antlr: ANother Tool for Language Recognition, is a language tool that provides a framework for constructing recognizers, interpreters, compilers, and translators from grammatical descriptions. (http://www.antlr3.org)
+    License: BSD-like Antlr Runtime 3 license
+  - Antlr: ANother Tool for Language Recognition, is a language tool that provides a framework for constructing recognizers, interpreters, compilers, and translators from grammatical descriptions. (https://www.antlr.org)
+    License: BSD-like Antlr Runtime 4 license
+
+From: Apache CXF
+  - WSDL Schema: WSDL Schema described as an XML Schema
+    License: WSDL-2004
+
+From: Apache NetBeans (version includes commit hash)
+  - Native Execution binaries: binaries that used by dlight.nativeexecution module (process_start, pty, pty_open - used for dealing with pseude terminals; sigqueue, killall - sending signals to processes; stat - getting detailed file information; unbuffer.so - used when unbuffering is required)
+    License: Apache Version 2.0 with CLA reference (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: Apache Software Foundation
+  - Apache CXF: Apache CXF is an open-source services framework that aids in the development of services using front-end programming APIs, like JAX-WS and JAX-RS. (http://cxf.apache.org/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    Comment: Only used to extract the WSDL xsd
+  - Apache Commons CSV: The Apache Commons CSV library provides a simple interface for reading and writing CSV files of various types. (https://commons.apache.org/proper/commons-csv/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons IO: Assist with developing IO functionality (https://commons.apache.org/proper/commons-io/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache FreeMarker: Template engine
+    License: Apache-2.0-freemarker
+  - Apache Jakarta Commons Logging: Logging component (https://commons.apache.org/proper/commons-logging/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Lucene: Java-based indexing and search technology (https://lucene.apache.org/core/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt) with Apache Lucene addendums
+  - Apache Xerces: Xerces XML parser. (http://xerces.apache.org/xerces-j/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Felix: Apache Felix OSGi container. (http://archive.apache.org/dist/felix/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Html4J Geolocation API: Html4j Geolocation API (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Html4J JSON Model in Java: Html4j JSON Model in Java (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Html4J Sound API via HTML: Html4j Sound API via HTML (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Html4J: Html4j (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Html4J: Html4j Boot (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Html4J: Html4j Boot FX (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Html4J: Html4j Boot Script (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Knockout4J: Knockout4J (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Knockout4J: Knockout4J (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache-2.0-ko4j
+  - Subversion Java-HL bindings: Java bindings library for subversion client (http://subversion.apache.org/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XHR via Java: XHR via Java (http://incubator.apache.org/projects/netbeans.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XML Commons Resolver: Library used to load XML catalogs to resolve external references. (http://xml.apache.org/commons/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    Comment: See readme.txt for important information about patched sources.
+  - langdetect: Fork of the com.cybozu.labs.langdetect language-detection library (https://github.com/validator/language-detection/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - salvation: This is a general purpose library for working with Content Security Policy policies. (https://github.com/shapesecurity/salvation)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: Cédric Beust
+  - JCommander: Parse command line parameters (https://jcommander.org)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: Dhatim
+  - fastexcel: Generate and read big Excel files quickly. (https://github.com/dhatim/fastexcel)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: Eclipse
+  - Eclipse Language Server Protocol Library: Eclipse Language Server Protocol Library (http://www.eclipse.org/)
+    License: Eclipse Public License v2.0
+  - Eclipse Xtend library: Eclipse Xtend library (http://www.eclipse.org/)
+    License: Eclipse Public License v2.0
+  - JGit Library: Integration library for Git client (http://www.eclipse.org/jgit/download/)
+    License: EDL-1.0-jgit
+
+From: Eclipse Foundation
+  - JAXB: Jakarta XML Binding API (https://projects.eclipse.org/projects/ee4j.jaxb-impl)
+    License: EDL-1.0
+  - Jakarta Activation: Jakarta Activation (https://eclipse-ee4j.github.io/jaf/)
+    License: EDL-1.0
+
+From: FormDev Software GmbH.
+  - FlatLaf Look and Feel: FlatLaf Look and Feel (https://www.formdev.com/flatlaf/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: GitHub
+  - GSon: JSon serialization/deserialization library
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JING: Jing is an application for validating an XML document against a RELAX NG schema, in either the XML or the compact syntax. (http://code.google.com/p/jing-trang/)
+    License: BSD-like jing license
+  - JSON simple: A simple Java toolkit for JSON. (https://github.com/fangyidong/json-simple)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - ValidationAPI: Provides utilities for adding input validation to Swing forms quickly and easily (https://github.com/timboudreau/simplevalidation/)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - snakeyaml-engine: YAML 1.2 parser, reader, writer library
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: Hamcrest
+  - Hamcrest: Provides a library of matcher objects (http://search.maven.org/#artifactdetails|org.hamcrest|hamcrest-core|1.3|jar)
+    License: BSD license with hamcrest copyright
+
+From: JCraft Inc.
+  - JSch: Java implementation of SSH2 (https://github.com/mwiede/jsch/tree/jsch-2.28.0)
+    License: BSD-like JSch license
+
+From: JSVG
+  - JSVG: JSVG - A Java SVG implementation (https://github.com/weisJ/jsvg)
+    License: MIT license JSVG variant
+
+From: JUnit
+  - JUnit Jupiter API: JUnit Jupiter API
+    License: Eclipse Public License v2.0
+  - JUnit Jupiter Engine: JUnit Jupiter Engine
+    License: Eclipse Public License v2.0
+  - JUnit Jupiter Params: JUnit Jupiter Params
+    License: Eclipse Public License v2.0
+  - JUnit Jupiter: JUnit Jupiter (https://search.maven.org/search?q=g:org.junit.jupiter%20AND%20v:5.14.4)
+    License: Eclipse Public License v2.0
+  - JUnit: JUnit harness runtime (http://search.maven.org/#artifactdetails|junit|junit|4.13.2|jar)
+    License: Eclipse Public License v1 (https://www.eclipse.org/legal/epl-v10.html)
+  - Open Test Alliance for the JVM: Open Test Alliance for the JVM (https://github.com/ota4j-team/opentest4j)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: Java Native Access
+  - Java Native Access: Dynamically access native libraries from Java without JNI. (https://github.com/java-native-access/jna)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: JavaEWAH Project
+  - JavaEWAH: Compressed variant of Java BitSet (https://github.com/lemire/javaewah)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: Krzysztof Rzymkowski
+  - opczip: Open Packaging Conventions compatible ZIP64 implementation. Especially MS Excel compatible. (https://github.com/rzymek/opczip)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: NetBeans
+  - NetBeans Application Launchers: Windows Launchers for NetBeans Applications
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - NetBeans Platform Applications Launchers: Windows Launchers for the NetBeans Platform Applications
+    License: CDDL-1.0
+  - Test data for editor.settings.storage module: Additional test data for the editor.settings.storage module
+    License: CDDL 1.0 + SPL 1.0
+  - exechlp: binaries that used by dlight.nativeexecution module (process_start, pty, pty_open - used for dealing with pseude terminals; sigqueue, killall - sending signals to processes; stat - getting detailed file information; unbuffer.so - used when unbuffering is required)
+    License: CDDL-1.0
+    Comment: needed for dlight.nativeexecution module to provide system-dependent services
+
+From: OSGi
+  - BIndex: OSGi bundle repository indexer. (http://www.osgi.org/Repository/BIndex)
+    License: Apache-2.0+MIT-Bindex
+  - OSGi: OSGi specification (compendium). (https://search.maven.org/artifact/org.osgi/osgi.cmpn/7.0.0/jar)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OSGi: OSGi specification (core & compendium). (https://search.maven.org/artifact/org.osgi/osgi.core/8.0.0/jar)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: OW2 Consortium
+  - OW2 ASM: Bytecode manipulation library (https://repository.ow2.org/nexus/content/repositories/releases/org/ow2/asm/)
+    License: BSD license with INRIA copyright
+
+From: Oracle
+  - JAXB: JAXB Reference Implementation (https://github.com/javaee/jaxb-v2)
+    License: CDDL-1.1
+  - JAXB: JAXB Reference Implementation (https://github.com/javaee/jaxb-v2)
+    License: CDDL-1.1-MIT-jaxb-xjc
+
+From: SourceForce
+  - ISO-RELAX: Relax validation APIs (http://sourceforge.net/projects/iso-relax/)
+    License: MIT license isorelax variant
+
+From: SourceForge
+  - JENA-IRI: The Jena IRI Library is an implementation of RFC 3987 (IRI) and RFC 3986 (URI), and a partial implementation of other related standards. (http://jena.sourceforge.net/iri/index.html)
+    License: BSD-like iri license
+
+From: Subclipse
+  - SVNClientAdapter Library: Integration library for subversion client (http://subclipse.tigris.org/svnClientAdapter.html)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: TestNG
+  - TestNG: Java testing framework. (https://testng.org/doc/download.html)
+    License: Apache-2.0+MIT+testng
+
+From: TestNG Ant Integration
+  - TestNG Ant Integration: Java testing framework. (https://github.com/testng-team/testng-ant)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: W3C
+  - CSS 2.1 Specification: Documentation for the CSS 2.1 standard (http://www.w3.org/TR/CSS21/)
+    License: W3C
+  - CSS 3 Specification: Documentation for the CSS 3 standard (http://www.w3.org/TR/css3-*)
+    License: W3C
+  - HTML 4.01 Specification: Documentation for the HTML 4.01 standard (http://www.w3.org/TR/1999/REC-html401-19991224/)
+    License: W3C
+
+From: http://ini4j.sourceforge.net/
+  - Ini4J: Java API for handling Windows ini file format
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: http://jquery.com
+  - jquery-api.xml: Documentation api file for jQuery
+    License: MIT license JQuery variant
+
+From: http://search.maven.org/#artifactdetails|junit|junit|4.13.2|jar
+  - JUnit: JUnit is a regression testing framework
+    License: Eclipse Public License v1 (https://www.eclipse.org/legal/epl-v10.html)
+
+From: http://site.icu-project.org/
+  - ICU4J: Unicode and Globalization support
+    License: MIT license icu4j variant
+  - icu4j: icu4j license
+    License: MIT-icu4j-74
+
+From: http://tomcat.apache.org
+  - Apache Tomcat (Annotations Package): Annotations used in Apache Tomcat
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Tomcat (embedded): Apache Tomcat (embedded) is a library version of the Apache Tomcat servlet container, which can be used to create embedded servlet containers in other applications.
+    License: Apache-2.0-tomcat
+
+From: http://wordlist.sourceforge.net/
+  - SCOWL Wordlist: English dictionary word list
+    License: BSD-SCOWL
+
+From: http://www.php.net/docs.php
+  - phpsigfiles: Signature files for PHP runtime and PHP runtime extensions for use from code completion etc. The file is build from the PHP manual.
+    License: CC-BY-3.0
+
+From: http://www.whatwg.org/specs/web-apps/current-work/
+  - HTML 5 Specification: Documentation for the HTML 5 standard
+    License: HTML5DOC license
+
+From: http://www2.cs.tum.edu/projects/cup/
+  - Java CUP: LALR Parser Generator in Java
+    License: JavaCUP
+
+From: https://commons.apache.org/proper/commons-codec/
+  - Apache Commons Codec: General encoding/decoding algorithms (for example phonetic, base64, URL).
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: https://commons.apache.org/proper/commons-compress/index.html
+  - Commons Compress: The Apache Commons Compress library defines an API for working with ar, cpio, Unix dump, tar, zip, gzip, XZ, Pack200, bzip2, 7z, arj, lzma, snappy, DEFLATE, lz4, Brotli, Zstandard, DEFLATE64 and Z files.
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: https://commons.apache.org/proper/commons-lang/
+  - Commons Lang: Provides extra functionality for classes in java.lang.
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: https://commons.apache.org/proper/commons-net/index.html
+  - Commons Net: Apache Commons Net implements the client side of many basic Internet protocols.
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: https://github.com/3breadt/dd-plist
+  - plist: An open source library to parse and generate property lists
+    License: MIT license dd-plist variant
+
+From: https://github.com/eclipse-ee4j/glassfish-hk2
+  - HK2: A light-weight and dynamic dependency injection framework
+    License: Eclipse Public License v2.0
+
+From: https://github.com/eclipse/tm4e
+  - TextMate support for Eclipse: Used to interpret TextMate grammars
+    License: Eclipse Public License v2.0
+
+From: https://github.com/google/guava
+  - Guava - Failure Access Library: A Guava subproject
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Guava: Guava is a set of core libraries that includes new collection types (such as multimap and multiset), immutable collections, a graph library, and utilities for concurrency, I/O, hashing, primitives, strings, and more.
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: https://github.com/jhy/jsoup
+  - jsoup: jsoup library
+    License: MIT license jsoup variant
+
+From: https://github.com/jline/jline3/tree/master
+  - JLine3 shaded for Graal: JLine3 shaded for Graal
+    License: BSD-jline3
+
+From: https://github.com/jruby/jcodings
+  - jcodings: Java-based codings helper classes for Joni and JRuby
+    License: MIT-nocopyright
+    Comment: This library is required by bytelist 1.0.15
+
+From: https://github.com/jruby/joni
+  - jcodings: Needed by TextMate support for Eclipse
+    License: MIT license JRuby variant
+
+From: https://github.com/microsoft/TypeScript
+  - jsstubs: JS Stubs for core library - based on the stub library as distibuted with the typescript compiler
+    License: Apache-2.0-typescript2
+
+From: https://github.com/oracle/graal
+  - Graal SDK and Truffle API: Graal SDK and Truffle API
+    License: UPL
+  - Graal SDK and Truffle Runtime: Graal SDK and Truffle Runtime
+    License: UPL
+
+From: https://github.com/oracle/graal https://github.com/jruby/jcodings
+  - Truffle API with shaded jcodings library: Truffle API with shaded jcodings library
+    License: UPL-MIT-jcodings
+
+From: https://github.com/typescript-language-server/typescript-language-server
+  - typescript-language-server: Language Server Protocol (LSP) implementation for TypeScript using tsserver
+    License: Apache 2.0 license for typescript-language-server
+
+From: https://github.com/validator/galimatias
+  - ISO-RELAX: Relax validation APIs
+    License: MIT-galimatias
+
+From: https://github.com/vieiro/toml-java
+  - TOML parser in Java: A parser for Tom's Obvious, Minimal Language (TOML). (http://github.com/vieiro/toml-java)
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: https://github.com/vsch/flexmark-java
+  - FlexMark-java: FlexMark library
+    License: BSD license with FlexMark copyright
+
+From: https://h2database.com
+  - H2 Database Engine: The H2 Database Enginge is a pure java database, that can be used in embedded and server mode.
+    License: Eclipse Public License v1, h2 variant
+
+From: https://jdbc.postgresql.org/about/license.html
+  - PostgreSQL JDBC Driver: Allows Java programs to interact with a PostgreSQL database
+    License: BSD with PostgreSQL Global Development Group copyright
+    Comment: Out-of-the-box support for Postgres Java database applications
+
+From: https://mina.apache.org/sshd-project/
+  - Apache MINA SSHD: Apache MINA SSHD is a 100% pure java library to support the SSH protocols on both the client and server side.
+    License: Apache Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: https://projects.eclipse.org/projects/ee4j.servlet
+  - Servlet API: Java Servlet API
+    License: Eclipse Public License v2.0
+
+From: https://secure.php.net/manual/en/
+  - PHP Documentation: Documentation for Predefined Variables
+    License: CC-BY-3.0
+
+From: https://www.bouncycastle.org/latest_releases.html
+  - Bouncy Castle ASN.1 Extension and Utility APIs: Legion of the Bouncy Castle Java cryptography APIs
+    License: MIT-bouncycastle
+  - Bouncy Castle Java OpenPGP/BCPG: Legion of the Bouncy Castle Java cryptography APIs
+    License: MIT-bouncycastle
+  - Bouncy Castle Java Provider: Legion of the Bouncy Castle Java cryptography APIs
+    License: MIT-bouncycastle
+
+From: https://www.slf4j.org/
+  - SLF4J: Simple Logging Facade for Java (SLF4J).
+    License: MIT-slf4j-22
+
+From: https://www.typescriptlang.org/
+  - typescript: TypeScript is a language for application scale JavaScript development
+    License: Apache 2.0 license for typescript
+
+From: jemmy.java.net
+  - Jemmy: Jemmy UI testing tool (https://web.archive.org/web/20120822233211/http://java.net:80/projects/jemmy)
+    License: CDDL-1.0
+
+From: validator.nu
+  - HTML 5 Parser Patched: HTML4/5 parser patched for editing purposes
+    License: MIT license html5 parser variant
+  - Validator.nu: Html/Generic RelaxNG schema validator service
+    License: MIT license validator variant
+

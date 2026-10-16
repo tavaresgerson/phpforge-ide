@@ -1,6 +1,0 @@
-Code completion result for source line:
-someFile.getParentFile().mk|dirs()
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-METHOD     mkdir()                         [PUBLIC]   boolean
-METHOD     mkdirs()                        [PUBLIC]   boolean

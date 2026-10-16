@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.servletapi/2">
+    <module_version install_time="1792104744237" last="true" origin="installer" specification_version="2.0">
+        <file crc="3516286118" name="config/Modules/org-netbeans-modules-servletapi.xml"/>
+        <file crc="1687453952" name="modules/ext/jakarta.servlet-api-6.1.0.jar"/>
+        <file crc="4241575206" name="modules/org-netbeans-modules-servletapi.jar"/>
+    </module_version>
+</module>

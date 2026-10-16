@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="com.sun.jna.platform">
+    <module_version install_time="1792104727703" last="true" origin="installer" specification_version="5.19.1">
+        <file crc="4246709460" name="config/Modules/com-sun-jna-platform.xml"/>
+        <file crc="1110263592" name="modules/com-sun-jna-platform.jar"/>
+    </module_version>
+</module>

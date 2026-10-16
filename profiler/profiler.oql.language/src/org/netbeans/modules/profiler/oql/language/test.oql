@@ -1,1 +1,0 @@
-select a from java.lang.String a where a.count > 100

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.junit5">
+    <module_version install_time="1792104730214" last="true" origin="installer" specification_version="1.31">
+        <file crc="3766699741" name="config/Modules/org-netbeans-libs-junit5.xml"/>
+        <file crc="1998111001" name="modules/ext/junit-jupiter-api-5.14.4.jar"/>
+        <file crc="1365480992" name="modules/ext/junit-jupiter-engine-5.14.4.jar"/>
+        <file crc="3764904598" name="modules/ext/junit-jupiter-params-5.14.4.jar"/>
+        <file crc="1199898243" name="modules/ext/opentest4j-1.3.0.jar"/>
+        <file crc="1687728160" name="modules/org-netbeans-libs-junit5.jar"/>
+    </module_version>
+</module>

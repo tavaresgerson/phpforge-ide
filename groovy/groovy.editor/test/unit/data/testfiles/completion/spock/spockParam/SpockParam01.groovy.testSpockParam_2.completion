@@ -1,5 +1,0 @@
-Code completion result for source line:
-1 * mathService.compute(_) >> { Math.pow(ni|m, 2) }
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-VARIABLE   nim                                        Object

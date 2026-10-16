@@ -1,5 +1,0 @@
-Code completion result for source line:
-package     /* a comment */              or|
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-PACKAGE    org                                        null

@@ -1,6 +1,0 @@
-Code completion result for source line:
-self.kolec|
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-FIELD      kolecko                         [PRIVATE]  int
-FIELD      kolecko22                       [PRIVATE]  int

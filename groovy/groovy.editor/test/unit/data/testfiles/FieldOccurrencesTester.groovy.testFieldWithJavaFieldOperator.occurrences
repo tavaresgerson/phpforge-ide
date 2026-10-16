@@ -1,5 +1,0 @@
-    def |>MARK_OCCURRENCES:fiel^d<|
-        |>MARK_OCCURRENCES:field<| += 1
-x.|>MARK_OCCURRENCES:field<| = 1
-println x.|>MARK_OCCURRENCES:field<|
-println x.@|>MARK_OCCURRENCES:field<|

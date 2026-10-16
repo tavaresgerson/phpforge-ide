@@ -187,7 +187,7 @@
 
   <target name="set-buildnumber" depends="-do-set-buildnumber">
     <!-- Overridable. Note: need not necessarily be a number at all): -->
-    <property name="buildnum" value="dev-${buildnumber}"/>
+    <property name="buildnum" value="${buildnumber}"/>
   </target>
 
   <target name="-load-module-flags">

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+AutoUpdate-Show-In-Client: false
+OpenIDE-Module: org.netbeans.modules.phpforge.icons
+OpenIDE-Module-Name: PHPForge Icon Theme
+OpenIDE-Module-Short-Description: Flat PHP icon set in the JetBrains style for PHPForge IDE.
+OpenIDE-Module-Long-Description: Injects flat, JetBrains-style icons for PHP types \
+    (class, interface, trait, enum, function, constant, methods and fields) into the \
+    php.editor module via branding locale JARs. Includes HiDPI @2x variants.
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Display-Category: PHPForge IDE

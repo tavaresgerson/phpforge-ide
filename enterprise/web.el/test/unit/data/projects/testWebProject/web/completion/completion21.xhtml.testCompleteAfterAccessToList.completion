@@ -1,8 +1,0 @@
-Code completion result for source line:
-#{bean.myList[0].|}
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-METHOD     concat(String str)              [PUBLIC]   String
-METHOD     toCharArray()                   [PUBLIC]   char[]
-METHOD     trim()                          [PUBLIC]   String
-PROPERTY   bytes                           [PUBLIC]   byte[]

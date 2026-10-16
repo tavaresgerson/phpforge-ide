@@ -1,2 +1,0 @@
-class NoPrefix extends  {
-}

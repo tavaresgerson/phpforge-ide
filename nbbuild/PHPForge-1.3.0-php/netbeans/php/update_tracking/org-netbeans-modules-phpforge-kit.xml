@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.phpforge.kit">
+    <module_version install_time="1792104769523" last="true" origin="installer" specification_version="1.62">
+        <file crc="1222951997" name="VERSION.txt"/>
+        <file crc="3627551600" name="config/Modules/org-netbeans-modules-phpforge-kit.xml"/>
+        <file crc="1376005796" name="modules/org-netbeans-modules-phpforge-kit.jar"/>
+    </module_version>
+</module>

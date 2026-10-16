@@ -1,3 +1,0 @@
-4:20-4:29:error:cannot find symbol
-  symbol:method undefined()
-  location:variable err of type PrintStream

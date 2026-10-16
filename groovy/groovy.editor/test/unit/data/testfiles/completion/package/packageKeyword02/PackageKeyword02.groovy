@@ -1,5 +1,0 @@
-pac
-
-class AA {
-    
-}

@@ -1,5 +1,0 @@
-Code completion result for source line:
-x|
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-METHOD     x()                             [PUBLIC]   Object

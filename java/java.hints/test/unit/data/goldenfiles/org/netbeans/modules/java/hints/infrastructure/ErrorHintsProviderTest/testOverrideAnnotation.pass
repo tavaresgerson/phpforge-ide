@@ -1,1 +1,0 @@
-3:4-3:13:error:t() in TestOverrideAnnotation does not override or implement a method from a supertype

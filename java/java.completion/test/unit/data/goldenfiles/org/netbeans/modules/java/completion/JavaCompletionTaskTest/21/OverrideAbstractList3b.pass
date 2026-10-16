@@ -1,4 +1,0 @@
-public abstract String get(int arg0) - implement
-public default String getFirst() - override
-public default String getLast() - override
-public int getModCount() - generate

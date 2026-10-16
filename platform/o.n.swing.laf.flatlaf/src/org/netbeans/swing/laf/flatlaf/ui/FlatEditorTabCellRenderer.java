@@ -29,15 +29,21 @@ import java.awt.Graphics2D;
 import java.awt.Insets;
 import java.awt.Polygon;
 import java.awt.Rectangle;
+import java.awt.Shape;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.RoundRectangle2D;
 import java.awt.font.FontRenderContext;
 import javax.swing.Icon;
 import javax.swing.JComponent;
 import javax.swing.UIManager;
+import org.netbeans.api.actions.Savable;
 import org.netbeans.swing.laf.flatlaf.HiDPIUtils;
+import org.netbeans.swing.tabcontrol.TabData;
 import org.netbeans.swing.tabcontrol.TabDisplayer;
 import org.netbeans.swing.tabcontrol.plaf.AbstractTabCellRenderer;
 import org.netbeans.swing.tabcontrol.plaf.TabControlButton;
 import org.netbeans.swing.tabcontrol.plaf.TabPainter;
+import org.openide.util.Lookup;
 
 /**
  * FlatLaf implementation of tab renderer
@@ -79,6 +85,9 @@ public class FlatEditorTabCellRenderer extends AbstractTabCellRenderer {
 
     private static final boolean showSelectedTabBorder = Utils.getUIBoolean("EditorTab.showSelectedTabBorder", underlineAtTop); // NOI18N
     private static final boolean unscaledBorders = Utils.getUIBoolean("EditorTab.unscaledBorders", false); // NOI18N
+
+    /** PHPForge IDE: cor do indicador de arquivo modificado nas abas. */
+    private static final Color modifiedDotColor = Utils.getUIColor("EditorTab.modifiedDotColor", new Color(0x1D, 0xD6, 0xB4)); // NOI18N
 
     private static final FlatTabPainter leftClipPainter = new FlatTabPainter(true, false);
     private static final FlatTabPainter noClipPainter = new FlatTabPainter(false, false);
@@ -222,10 +231,46 @@ public class FlatEditorTabCellRenderer extends AbstractTabCellRenderer {
                     paintInteriorAtScale1x(gd, c, width, height, scale);
                 });
 
-            // paint close button
+            // paint close button or modified indicator (PHPForge IDE)
             FlatEditorTabCellRenderer ren = (FlatEditorTabCellRenderer) c;
-            if (!ren.isClipLeft() && !ren.isClipRight())
-                paintCloseButton(g, ren);
+            if (!ren.isClipLeft() && !ren.isClipRight()) {
+                if (isModified(ren) && !ren.inCloseButton()) {
+                    paintModifiedDot(g, ren);
+                } else {
+                    paintCloseButton(g, ren);
+                }
+            }
+        }
+
+        /** PHPForge IDE: indicador de arquivo modificado (estilo IntelliJ). */
+        private boolean isModified(FlatEditorTabCellRenderer ren) {
+            TabData data = ren.getData();
+            if (data == null) {
+                return false;
+            }
+            Object userObject = data.getUserObject();
+            return userObject instanceof Lookup.Provider provider
+                    && provider.getLookup().lookup(Savable.class) != null;
+        }
+
+        private void paintModifiedDot(Graphics g, FlatEditorTabCellRenderer ren) {
+            Rectangle r = new Rectangle();
+            getCloseButtonRectangle(ren, r, new Rectangle(0, 0,
+                                                          ren.getWidth(),
+                                                          ren.getHeight()));
+            if (!g.hitClip(r.x, r.y, r.width, r.height)) {
+                return;
+            }
+            int d = Math.min(r.width, r.height) / 3;
+            int x = r.x + (r.width - d) / 2;
+            int y = r.y + (r.height - d) / 2;
+            Graphics2D g2 = (Graphics2D) g.create();
+            try {
+                g2.setColor(modifiedDotColor);
+                g2.fill(new Ellipse2D.Float(x, y, d, d));
+            } finally {
+                g2.dispose();
+            }
         }
 
         private static void fillGradientRect(Graphics2D g, int x, int y, int width, int height,
@@ -257,10 +302,19 @@ public class FlatEditorTabCellRenderer extends AbstractTabCellRenderer {
             int tabSeparatorWidth = showSeparator ? contentBorderWidth : 0;
             int underlineHeight = (int) Math.round(FlatEditorTabCellRenderer.underlineHeight * scale);
 
+            // PHPForge IDE: cantos arredondados sutis na aba selecionada (estilo IntelliJ).
+            Shape originalClip = g.getClip();
+            if (selected) {
+                g.clip(new RoundRectangle2D.Double(
+                        1, 1, width - tabSeparatorWidth - 2, height + 8 * scale, 8 * scale, 8 * scale));
+            }
+
             fillGradientRect(g, 0, 0, width - (bg != background ? tabSeparatorWidth : 0), height, bg,
                     selected && !selectedBackground.equals(selectedBackgroundBottomGradient)
                             ? selectedBackgroundBottomGradient : bg,
                     (underlineAtTop ? underlineHeight : 0));
+
+            g.setClip(originalClip);
 
             if (selected) {
                 if (showSelectedTabBorder) {

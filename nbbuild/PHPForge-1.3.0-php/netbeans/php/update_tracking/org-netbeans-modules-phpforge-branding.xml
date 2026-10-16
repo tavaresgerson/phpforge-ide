@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.phpforge.branding/1">
+    <module_version install_time="1792104769359" last="true" origin="installer" specification_version="1.66">
+        <file crc="1682671756" name="apache-netbeans.ico"/>
+        <file crc="3146336388" name="apache-netbeans.svg"/>
+        <file crc="4088415880" name="apache-netbeans1024.png"/>
+        <file crc="307992600" name="apache-netbeans256.png"/>
+        <file crc="2362073912" name="apache-netbeans48.png"/>
+        <file crc="3654817508" name="apache-netbeans512.png"/>
+        <file crc="1389711437" name="config/Modules/org-netbeans-modules-phpforge-branding.xml"/>
+        <file crc="3749112892" name="modules/ext/locale/updater_nb.jar"/>
+        <file crc="478319800" name="modules/locale/org-netbeans-modules-php-editor_nb.jar"/>
+        <file crc="3308173840" name="modules/org-netbeans-modules-phpforge-branding.jar"/>
+        <file crc="2433733350" name="netbeans.icns"/>
+        <file crc="307992600" name="netbeans.png"/>
+        <file crc="1864553960" name="shortcuts.pdf"/>
+        <file crc="1848947865" name="shortcuts_mac.pdf"/>
+    </module_version>
+</module>

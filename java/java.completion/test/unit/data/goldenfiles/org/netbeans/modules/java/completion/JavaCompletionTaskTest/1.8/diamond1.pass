@@ -1,2 +1,0 @@
-public Test(T value)
-public Test(String name, T value)

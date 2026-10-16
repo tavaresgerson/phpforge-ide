@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+
+    <folder name="Editors">
+        <!-- PHPForge IDE ships dark-first: default editor color profile -->
+        <attr name="currentFontColorProfile" stringvalue="FlatLaf Dark"/>
+
+        <folder name="text">
+            <folder name="x-php5">
+                <!-- Darcula syntax colors for PHP (FlatLaf Dark profile) -->
+                <folder name="FontsColors">
+                    <folder name="FlatLaf Dark">
+                        <folder name="Defaults">
+                            <file name="phpforge-php-dark-token-colorings.xml" url="resources/php-dark-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+                <!-- JetBrains-like line height (1.25) -->
+                <folder name="Preferences">
+                    <attr name="line-height-correction" floatvalue="1.25"/>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+
+    <!-- Toolbar única compacta: nossa configuração substitui a do core.ui;
+         a barra contextual do editor e o medidor de memória ficam ocultos. -->
+    <folder name="Toolbars">
+        <file name="Standard.xml" url="resources/toolbar-standard.xml"/>
+        <file name="Default_hidden"/>
+        <file name="Memory_hidden"/>
+    </folder>
+
+    <!-- Menus: oculta itens irrelevantes para PHP -->
+    <folder name="Menu">
+        <folder name="Tools">
+            <file name="ServerManagerAction3.shadow_hidden"/>
+            <file name="CloudManagerAction3.shadow_hidden"/>
+        </folder>
+    </folder>
+
+    <!-- Options: PHP no topo das categorias -->
+    <folder name="OptionsDialog">
+        <folder name="PHP">
+            <attr name="position" intvalue="100"/>
+        </folder>
+    </folder>
+
+    <!-- Tela de boas-vindas PHP-centric (Dashboard) -->
+    <folder name="Dashboard">
+        <folder name="Main">
+            <attr name="showOnStartup" boolvalue="true"/>
+            <file name="GettingStartedWidget.shadow">
+                <attr name="originalFile" stringvalue="Dashboard/Widgets/GettingStartedWidget.instance"/>
+                <attr name="position" intvalue="50"/>
+            </file>
+        </folder>
+        <folder name="Widgets">
+            <file name="GettingStartedWidget.instance">
+                <attr name="instanceClass" stringvalue="org.netbeans.modules.phpforge.ui.GettingStartedWidget"/>
+            </file>
+        </folder>
+    </folder>
+
+</filesystem>

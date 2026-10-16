@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<html>
+<head>
+   <title>PHPForge IDE - README</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="netbeans.css">
+</head>
+
+<body>
+<img src="php/apache-netbeans256.png"
+     height="72"
+     width="72"
+     alt="PHPForge IDE Logo"
+     style="float: left; margin-top: 1ex; margin-left: 2ex; margin-bottom: 1ex; margin-right: 2ex"/>
+<h2>README</h2>
+<h1>PHPForge IDE</h1>
+<p style="clear: both">PHPForge IDE is an integrated development environment (IDE)
+focused on PHP. It is a fork of the Apache NetBeans Platform, trimmed to a lean
+PHP development environment: PHP editing, debugging (Xdebug), framework support
+(Symfony, Zend, Nette, Doctrine, Twig and more), Composer integration and
+HTML/CSS/JavaScript tooling.</p>
+
+<h3>To start the IDE (Linux):</h3>
+<ul>
+  <li>Run <i><var>install-directory</var></i><code>/bin/netbeans</code> from the command line.</li>
+</ul>
+<h3>To stop the IDE:</h3>
+<ul>
+  <li> From the IDE, choose File &gt; Exit.</li>
+</ul>
+<h3>To uninstall the IDE</h3>
+<p>If you are using the ZIP distribution just delete the extracted folder.</p>
+<p>After removing the IDE you might still have user and cache directories
+on the system that you may wish to remove (see below).</p>
+
+<h3>Documentation and sources</h3>
+<ul>
+<li>Project repository: <a href="https://github.com/tavaresgerson/phpforge-ide">https://github.com/tavaresgerson/phpforge-ide</a>.</li>
+<li>Based on Apache NetBeans: <a href="https://netbeans.apache.org/">https://netbeans.apache.org/</a>.</li>
+</ul>
+
+<h3>PHPForge IDE user / cache directories</h3>
+<p>A default user directory is created the first time you start the IDE. It is
+  used to store your user settings, options and runtime data. In addition a cache
+  directory is created to store various data used at runtime to speed up operation.</p>
+<p>The locations of these directories can be found in the About-Dialog (Main-Menu: Help &rarr; About).</p>
+
+<dl>
+    <dt>Microsoft Windows</dt>
+    <dd>
+        The user directory is generally found at <code>C:\Users\</code><i>username</i><code>\AppData\Roaming\NetBeans\</code><i>version</i>.<br />
+        The cache directory is generally found at <code>C:\Users\</code><i>username</i><code>\AppData\Local\NetBeans\Cache\</code><i>version</i>.
+    </dd>
+    <dt>Unix-like</dt>
+    <dd>
+        The user directory is generally found at <i><var>$HOME</var></i><code>/.netbeans/</code><i>version</i>.<br />
+        The cache directory is generally found at <i><var>$HOME</var></i><code>/.cache/netbeans/</code><i>version</i>.
+    </dd>
+    <dt>macOS</dt>
+    <dd>
+        The user directory is generally found at <code>/Users/</code><i>username</i><code>/Library/Application Support/Netbeans/</code><i>version</i>.<br />
+        The cache directory is generally found at <code>/Users/</code><i>username</i><code>/Library/Caches/Netbeans/</code><i>version</i>.
+    </dd>
+</dl>
+
+</body>
+</html>

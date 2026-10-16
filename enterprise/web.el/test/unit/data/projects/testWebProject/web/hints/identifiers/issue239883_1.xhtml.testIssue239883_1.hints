@@ -1,3 +1,0 @@
-                <h:outputLabel value="taste: "/><h:inputText value="#{appleBean.selected.tasteMistake}"/>
-                                                                                         ------------
-HINT:Unknown property "tasteMistake"

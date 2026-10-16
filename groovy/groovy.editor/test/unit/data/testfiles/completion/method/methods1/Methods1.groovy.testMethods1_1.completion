@@ -1,6 +1,0 @@
-Code completion result for source line:
-new URL("http://google.com").getPr|
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-METHOD     getProperties()                            Map
-METHOD     getProtocol()                   [PUBLIC]   String

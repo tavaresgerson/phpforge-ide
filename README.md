@@ -1,179 +1,85 @@
-<!--
+# PHPForge IDE
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+O **PHPForge IDE** é um ambiente de desenvolvimento integrado (IDE) focado em PHP, construído sobre a plataforma Apache NetBeans. O objetivo do projeto é oferecer uma experiência enxuta e otimizada para desenvolvimento PHP — removendo os módulos desnecessários e aprimorando a interface.
 
-      http://www.apache.org/licenses/LICENSE-2.0
+## Sobre este projeto
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+Este é um **fork do [Apache NetBeans](https://netbeans.apache.org/)**, mantido de forma independente. Ele preserva a arquitetura modular e robusta do NetBeans, mas restringe o conjunto de módulos compilados aos necessários para o desenvolvimento PHP.
 
--->
+* Baseado no código-fonte do Apache NetBeans (licença Apache 2.0 — ver [LICENSE](LICENSE) e [NOTICE](NOTICE)).
+* Clusters compilados: `platform`, `ide`, `webcommon` e `php` (veja [docs/estrutura-do-projeto.md](docs/estrutura-do-projeto.md)).
+* Identidade visual própria (marca, splash, ícones) — assets em `brand/`, aplicados pelo módulo `php/phpforge.branding`.
+* Interface estilo JetBrains: tema escuro **PHPForge Dark** (paleta JetBrains New UI Dark: superfícies `#2B2D30`, editor `#2B2B2B`, seleção `#3574F0`, seleção inativa `#2E436E`, acento mint nas abas), menu bar fundida com a toolbar em faixa única, abas slim com underline azul, fonte JetBrains Mono no editor, Inter na UI, **icon set Lucide** monocromático na toolbar/árvores, Dashboard de boas-vindas e abas com indicador de modificado — módulos `phpforge.ui` e `phpforge.icons`.
 
-# Apache NetBeans
+## Requisitos
 
-Apache NetBeans is an open source development environment, tooling platform, and application framework.
+* Linux (outros sistemas podem funcionar, mas não são o foco)
+* Git
+* Ant 1.10+
+* JDK 21 (obrigatório — o código é compilado com `--release 21`)
 
-### Build status
-   * GitHub actions
-     * [![Build Status](https://github.com/apache/netbeans/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/apache/netbeans/actions/workflows/main.yml)
-     * [![Profiler Lib Native Binaries](https://github.com/apache/netbeans/actions/workflows/native-binary-build-lib.profiler.yml/badge.svg?branch=master)](https://github.com/apache/netbeans/actions/workflows/native-binary-build-lib.profiler.yml)
-     * [![NetBeans Native Execution Libraries](https://github.com/apache/netbeans/actions/workflows/native-binary-build-dlight.nativeexecution.yml/badge.svg?branch=master)](https://github.com/apache/netbeans/actions/workflows/native-binary-build-dlight.nativeexecution.yml)
-   * Apache Jenkins:
-     * Linux: [![Build Status](https://ci-builds.apache.org/job/Netbeans/job/netbeans-linux/badge/icon)](https://ci-builds.apache.org/job/Netbeans/job/netbeans-linux/)
-     * Windows: [![Build Status](https://ci-builds.apache.org/job/Netbeans/job/netbeans-windows/badge/icon)](https://ci-builds.apache.org/job/Netbeans/job/netbeans-windows) 
-   * License Status ( Apache Rat and ant verify-libs-and-licenses )
-     * [![Build Status](https://ci-builds.apache.org/job/Netbeans/job/netbeans-license/badge/icon)](https://ci-builds.apache.org/job/Netbeans/job/netbeans-license/)
+## Configurando o ambiente
 
-### Requirements
-
-  * Git
-  * Ant
-  * JDK 21 or above (to build and run NetBeans)
-
-#### Notes:
-
-* NetBeans license violation checks are managed via the [rat-exclusions.txt](https://github.com/apache/netbeans/blob/master/nbbuild/rat-exclusions.txt) file.
-* Set JAVA_HOME and ANT_HOME appropriately or leave them undefined.
-
-### Building NetBeans
-
-Build the default `release` config (See the [cluster.config](https://github.com/apache/netbeans/blob/ab66c7fdfdcbf0bde67b96ddb075c83451cdd1a6/nbbuild/cluster.properties#L19) property.)
-```
-$ ant build
-```
-Build the basic project (mainly Java features):
-```
-$ ant -Dcluster.config=basic build
-```
-Build the full project (may include clusters which are not be in the release):
-```
-$ ant -Dcluster.config=full build
-```
-Build the NetBeans Platform:
-```
-$ ant -Dcluster.config=platform build
-```
-Cleanup:
-```
-$ git clean -Xdf
-```
-
-#### Notes:
-* You can also use `php`, `enterprise`, etc. See the [cluster.properties](https://github.com/apache/netbeans/blob/master/nbbuild/cluster.properties) file.
-* Once built, you can simply open individual modules of interest with NetBeans and run/rebuild/debug them like any other project
-* The `nbbuild` directory should contain the portable NetBeans zip
-
-#### Generating Javadoc
-
-Build javadoc:
-```
-$ ant javadoc
-```
-
-#### Notes:
-
-* Run `javadoc-nb` task in Netbeans to run the javadoc build and display it in a web browser.
-
-### Running NetBeans
-
-Quick test run:
-```
-$ ant tryme
-```
-or run the portable zip distribution:
-1) extract the zip found in `nbbuild` to a directory other than `nbbuild`
-2) run the `netbeans` launcher found in `netbeans/bin`, optionally specifying a custom userdir
-
-example:
-```
-$ netbeans --userdir /tmp/nbtestdir1
-```
-
-### Some useful Launcher Options
-
-```
-  --jdkhome <path>      path to JDK used as runtime (and default JDK for projects)
-  --userdir <path>      use specified directory to store user settings
-  --cachedir <path>     use specified directory to store user cache, must be different from userdir
-  --fontsize <size>     set the base font size of the user interface, in points
-  -J<jvm_option>        pass <jvm_option> to JVM
-  --help                list more options
-```
-
-### Get In Touch
-
- * [Subscribe](mailto:users-subscribe@netbeans.apache.org) or [mail](mailto:users@netbeans.apache.org) the [users@netbeans.apache.org](mailto:users@netbeans.apache.org) list - Ask questions, find answers, and also help other users.
- * [Subscribe](mailto:dev-subscribe@netbeans.apache.org) or [mail](mailto:dev@netbeans.apache.org) the [dev@netbeans.apache.org](mailto:dev@netbeans.apache.org) list - Join development discussions, propose new ideas and connect with contributors.
-
-### Download
-
- * [Developer builds](https://ci-builds.apache.org/job/Netbeans/job/netbeans-linux/lastSuccessfulBuild/artifact/nbbuild/) on Jenkins (NetBeans-dev-xxx.zip).
- * [Latest release](https://netbeans.apache.org/download) (convenience binary of released source artifacts).
-
-### Reporting Bugs
-
- * [How to report bugs](https://netbeans.apache.org/participate/report-issue)
-
-### Log, Config and Cache Locations
-
- * start config (JVM settings, default JDK, userdir, cachedir location and more):  
-   `netbeans/etc/netbeans.conf`
- * user settings storage (preferences, installed plugins, logs):  
-   system dependent, see `Help -> About` for concrete location
- * cache files (maven index, search index etc):  
-   system dependent, see `Help -> About` for concrete location
- * default log location (tip: can be inspected via `View -> IDE Log`):  
-   `$DEFAULT_USERDIR_ROOT/var/log/messages.log`
-
-**Note:** removing/changing the user settings directory will reset NetBeans to first launch defaults
-
-### Other Repositories
-
- * [NetBeans website repos](https://github.com/apache/netbeans-antora?tab=readme-ov-file#basic-structure)
- * [NBPackage](https://github.com/apache/netbeans-nbpackage)
- * [NetBeans maven utilities](https://github.com/apache/netbeans-mavenutils-nbm-maven-plugin)
- * [NetBeans maven archetypes](https://github.com/apache/netbeans-mavenutils-archetypes)
-
-### Full History
-
-The origins of the code in this repository are older than its Apache existence.
-As such significant part of the history (before the code was donated to Apache)
-is kept in an independent repository. To fully understand the code
-you may want to merge the modern and ancient versions together:
+Certifique-se de que o `JAVA_HOME` aponte para o JDK 21 antes de compilar:
 
 ```bash
-$ git clone https://github.com/apache/netbeans.git
-$ cd netbeans
-$ git log platform/uihandler/arch.xml
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 ```
 
-This gives you just few log entries including the initial checkin and
-change of the file headers to Apache. But then the magic comes:
+> Dica: adicione a linha acima ao seu `~/.bashrc` para não precisar exportar em toda sessão.
+
+## Compilando para desenvolvimento
+
+Para compilar a IDE com a configuração PHP e abri-la logo em seguida:
 
 ```bash
-$ git remote add archive https://github.com/codelerity/netbeans-releases.git
-$ git fetch archive # this takes a while, the history is huge!
-$ git replace 6daa72c98 32042637 # the 1st donation
-$ git replace 6035076ee 32042637 # the 2nd donation
+cd nbbuild
+ant -Dcluster.config=php tryme
 ```
 
-When you search the log, or use the blame tool, the full history is available:
+Para apenas compilar, sem abrir a IDE:
 
 ```bash
-$ git log platform/uihandler/arch.xml
-$ git blame platform/uihandler/arch.xml
+cd nbbuild
+ant -Dcluster.config=php build-nozip
 ```
 
-You can browse the archived repo [here](https://github.com/codelerity/netbeans-releases).
+O resultado fica em `nbbuild/netbeans/`, já com o executável `bin/netbeans` e o arquivo `etc/netbeans.clusters` instalados. Para executar manualmente:
 
-Many thanks to Emilian Bold who created the original archive repository.
+```bash
+nbbuild/netbeans/bin/netbeans --userdir ~/.phpforge/dev
+```
+
+Sem o `--userdir`, a IDE usaria o diretório de usuário padrão (`~/.phpforge/<versão>`) — recomenda-se manter um diretório separado para não misturar com outras instalações.
+
+## Gerando a versão de produção
+
+O build de produção gera um arquivo ZIP pronto para distribuição. Use a propriedade `buildnumber` para definir o número da versão:
+
+```bash
+cd nbbuild
+ant -Dcluster.config=php -Dbuildnumber=1.0.0 build
+```
+
+O pacote será gerado em:
+
+```
+nbbuild/PHPForge-1.0.0-php.zip
+```
+
+O ZIP já contém o executável `bin/netbeans`, a configuração em `etc/` e toda a identidade visual do PHPForge IDE (splash, ícones, tela inicial).
+
+Para limpar completamente os artefatos de build antes de uma compilação limpa:
+
+```bash
+cd nbbuild
+ant clean
+```
+
+## Documentação
+
+* [docs/estrutura-do-projeto.md](docs/estrutura-do-projeto.md) — para que serve cada pasta do projeto.
+
+## Licença
+
+Apache License 2.0. Ver [LICENSE](LICENSE).

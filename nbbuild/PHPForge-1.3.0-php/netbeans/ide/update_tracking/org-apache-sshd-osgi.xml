@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.apache.sshd.osgi">
+    <module_version install_time="1792104742574" last="true" origin="installer" specification_version="2.20.0">
+        <file crc="2299049797" name="config/Modules/org-apache-sshd-osgi.xml"/>
+        <file crc="3960976178" name="modules/org-apache-sshd-osgi.jar"/>
+    </module_version>
+</module>

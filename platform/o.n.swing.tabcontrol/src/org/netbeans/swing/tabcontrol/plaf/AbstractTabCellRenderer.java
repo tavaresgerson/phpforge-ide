@@ -84,9 +84,22 @@ public abstract class AbstractTabCellRenderer extends JLabel
     public final void setShowCloseButton (boolean b) {
         showClose = b;
     }
-    
+
     public final boolean isShowCloseButton() {
         return showClose;
+    }
+
+    private TabData data;
+
+    /**
+     * Returns the tab data currently being rendered, or {@code null}.
+     * Set by {@link #getRendererComponent(TabData, Rectangle, int)}.
+     *
+     * @return the current TabData, or null
+     * @since 1.69
+     */
+    protected final TabData getData() {
+        return data;
     }
 
     private Rectangle scratch = new Rectangle();
@@ -313,6 +326,7 @@ public abstract class AbstractTabCellRenderer extends JLabel
     public final javax.swing.JComponent getRendererComponent(TabData data,
                                                              Rectangle bounds,
                                                              int state) {
+        this.data = data;
         setBounds(bounds);
         setText(data.getText());
         setIcon(data.getIcon());

@@ -1,5 +1,0 @@
-Code completion result for source line:
-def result = mathService.compute(ni|m)
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-VARIABLE   nim                                        Object

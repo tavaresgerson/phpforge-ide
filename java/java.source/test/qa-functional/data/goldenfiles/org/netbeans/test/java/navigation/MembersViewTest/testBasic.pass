@@ -1,7 +1,0 @@
-null
-    org.netbeans.test.java.navigation.MembersViewTest
-    SuperClass
-        SuperClass()
-        run():void
-        field:String
-        field2:int

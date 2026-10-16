@@ -1,6 +1,0 @@
-Code completion result for source line:
-#{|}
-(QueryType=COMPLETION, prefixSearch=true, caseSensitive=true)
-------------------------------------
-VARIABLE   b                                          null
-VARIABLE   fact                                       null

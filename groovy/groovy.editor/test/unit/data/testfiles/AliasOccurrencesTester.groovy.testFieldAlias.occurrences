@@ -1,2 +1,0 @@
-import static Math.MIN_VALUE as |>MARK_OCCURRENCES:min<|
-println |>MARK_OCCURRENCES:m^in<|

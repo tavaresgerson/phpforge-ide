@@ -1,1 +1,0 @@
-<!--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/gfx/css/default.css" />

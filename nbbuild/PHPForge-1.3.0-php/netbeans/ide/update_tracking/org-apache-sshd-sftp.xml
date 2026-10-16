@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.apache.sshd.sftp">
+    <module_version install_time="1792104749950" last="true" origin="installer" specification_version="2.20.0">
+        <file crc="2836174818" name="config/Modules/org-apache-sshd-sftp.xml"/>
+        <file crc="2054483041" name="modules/org-apache-sshd-sftp.jar"/>
+    </module_version>
+</module>
